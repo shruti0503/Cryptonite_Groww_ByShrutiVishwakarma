@@ -8,6 +8,11 @@ const LineChart = ({historicalData}) => {
     console.log("api", process.env.API_KEY);
     const [data,setData]=useState([["Date", "Prices"]]);
 
+    var options = {
+       border:"rounded",
+        colors: ['purple']
+      };
+
     useEffect(()=>{
 
         let dataCopy=[["Date","Prices"]]
@@ -31,6 +36,8 @@ const LineChart = ({historicalData}) => {
       data={data}
       height="100%"
       legendToggle
+
+      options={options}
     />
   )
 }

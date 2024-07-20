@@ -4,7 +4,7 @@ import { FooterLinks } from '@/constants/constants'
 
 const Footer = () => {
   return (
-    <div className='flex  w-full gap-10 bg-black items-center justify-center'>
+    <div className='flex pt-10  w-full gap-10 bg-black items-center justify-center'>
       <div className='text-white flex flex-col justify-start h-full'>
         <h1 className='text-5xl font-bold ms-8'>Tracking Made<span className='mt-4 text-gray-400 ms-4'>Easy </span>  </h1>
 

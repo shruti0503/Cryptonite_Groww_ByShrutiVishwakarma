@@ -36,3 +36,24 @@
 
     return ans;
   };
+
+export const fetchAllCoin =async () => {
+    // console.log("api", process.env.API_KEY);
+    let ans;
+
+    const options = {
+      method: 'GET',
+      headers: { accept: 'application/json', 'x-cg-demo-api-key': `${process.env.API_KEY}` }
+    };
+
+   await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd', options)
+      .then(response => response.json())
+      .then(response => ans=response)
+      .catch(err => console.error(err));
+
+
+    console.log("ans is", ans);
+    
+    return ans;
+
+  };
