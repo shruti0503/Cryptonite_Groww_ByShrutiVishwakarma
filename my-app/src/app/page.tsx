@@ -8,6 +8,7 @@ import { InfiniteMovingCards } from "@/components/InfiniteMovingCards";
 import { Reviews } from "@/constants/constants";
 import Footer from "@/components/ui/Footer";
 import { useRouter } from "next/navigation";
+import { About } from "@/constants/constants";
 
 export default function Main() {
   const router = useRouter();
@@ -32,14 +33,14 @@ export default function Main() {
                 >
                   <span
                   onClick={()=>router.push('/home')}
-                   className="bg-clip-text  bg-gradient-to-r from-neutral-500 to-neutral-600 md:text-center font-sans group-hover:bg-gradient-to-r  hover:text-black  group-hover:from-black group-hover:to-black text-white">
+                   className="bg-clip-text  bg-gradient-to-r from-neutral-500 to-neutral-600 md:text-center font-sans group-hover:bg-gradient-to-r  hover:text-white group-hover:text-black-500 group-hover:from-black group-hover:to-black text-white">
                     Start For Free Today
                   </span>
                 </Button>
                 <h1 className="text-5xl md:text-8xl bg-clip-text text-transparent  bg-gradient-to-b from-white to-neutral-600 font-sans font-bold">
                    Track with Cryptonite
                 </h1>
-              </div>
+            </div>
             }
           />
         </div>
@@ -54,8 +55,14 @@ export default function Main() {
           direction="right"
           speed="slow"
         />
+        <InfiniteMovingCards
+          className="md:mt-[2rem] mt-[-100px] justify-center  w-full flex"
+          items={About}
+          direction="right"
+          speed="slow"
+        />
         </div>
-        <BackgroundBeams />
+        
 
       </section>
 

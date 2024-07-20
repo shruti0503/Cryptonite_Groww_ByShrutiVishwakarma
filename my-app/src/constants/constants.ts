@@ -99,3 +99,18 @@ export const FooterLinks: Links[]=[
   }
 
 ]
+
+export const About : any[]=[
+  {
+    title:"Personal Analysis",
+    desc:"25 customizable crypto reports Interactive charts for trades and coins Profit , loss  Audit reports Realized and unrealized gains"
+ },
+ {
+  title:"Trade Imports",
+  desc: "Easy import from 300+ exchanges ,Automatic import via APIs , Direct sync with the blockchain ,Export in Excel, PDF, CSV, XML & JSON"
+ },
+ {
+  title:"Coin Charts & Trends",
+  desc: "Easy import from 300+ exchanges ,Automatic import via APIs , Direct sync with the blockchain ,Export in Excel, PDF, CSV, XML & JSON"
+ }
+]

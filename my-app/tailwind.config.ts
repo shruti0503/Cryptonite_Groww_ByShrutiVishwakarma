@@ -1,4 +1,7 @@
 import type { Config } from 'tailwindcss'
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
   darkMode: ['class'],
@@ -58,6 +61,7 @@ const config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      
       keyframes: {
         scroll: {
           to: {
@@ -107,6 +111,22 @@ const config = {
             transform: 'translateY(-50%)',
           },
         },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
         'accordion-down': {
           from: { height: '0' },
           to: { height: 'var(--radix-accordion-content-height)' },
@@ -115,6 +135,7 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        
       },
       animation: {
         scroll:
@@ -127,20 +148,23 @@ const config = {
         third: 'moveInCircle 40s linear infinite',
         fourth: 'moveHorizontal 40s ease infinite',
         fifth: 'moveInCircle 20s ease infinite',
+        "meteor-effect": "meteor 5s linear infinite",
+        aurora: "aurora 60s linear infinite",
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'),addVariablesForColors],
+  
 } satisfies Config
 
-// function addVariablesForColors({ addBase, theme }: any) {
-//   let allColors = flattenColorPalette(theme('colors'))
-//   let newVars = Object.fromEntries(
-//     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-//   )
-//   addBase({
-//     ':root': newVars,
-//   })
-// }
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme('colors'))
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  )
+  addBase({
+    ':root': newVars,
+  })
+}
 
 export default config

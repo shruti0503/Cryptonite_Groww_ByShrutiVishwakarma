@@ -8,6 +8,9 @@ import CommonHeader from '@/components/global/CommonHeader'
 import { CoinContext } from '@/context/coinContext'
 import { useContext } from 'react'
 import Image from 'next/image'
+import { Meteors } from '@/components/ui/meteor'
+import { motion } from "framer-motion";
+import { AuroraBackground } from '@/components/ui/aurora'
 
 
 import { Progress } from "@/components/ui/progress"
@@ -75,7 +78,19 @@ const Coin = () => {
 
   if (coinData && HistoricalChartData) {
     return (
-      <div className='w-full h-[1500px]  flex '>
+    
+      <div className='w-full h-[1700px]  flex '>
+         {/* <AuroraBackground>
+        <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="relative flex flex-col gap-4 items-center justify-center px-4"
+      > */}
           <CommonHeader 
                 displayCoin={displayCoin}
                 setDisplayCoin={setDisplayCoin}    
@@ -117,6 +132,17 @@ const Coin = () => {
                     current={coinData?.market_data.current_price["usd"]}
 
                     /> */}
+
+                  <div className='About flex flex-col gap-2 p-5'>
+                     {/* @ts-ignore */}
+                    <h2 className='text-2xl font-bold'>About {coinData?.name}</h2>
+                    {/* @ts-ignore */}
+                    <h2 className='text-l font-semibold text-gray-500'>MarketCap Rank : {coinData?.market_cap_rank}</h2>
+                    <div className='flex gap-5'>
+                       {/* @ts-ignore */}
+                      <p className='text-sm text-justify'>{coinData?.description.en}</p>
+                      </div>
+                  </div>
 
                   
                   <div className='Performace flex flex-col gap-5 p-5'>
@@ -192,8 +218,14 @@ const Coin = () => {
          </div>
 
        <BackgroundBeams />
+
+       {/* </motion.div>
+
+     </AuroraBackground> */}
+       
       
       </div>   
+    
     );
   } else {
     return (
