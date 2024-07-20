@@ -67,7 +67,7 @@ const Home = () => {
       />
       <section className='h-full min-h-[100vh] gap-20 pt-40 ps-10  w-full  !overflow-visible relative flex  items-center  px-20 '>
         <div className='w-[67vw] flex max-h-[78vh] min-h-[78vh] mb-[300px] zoom-[80%]  gap-10 flex-col z-[222] justify-evenlyx'>
-          <h1 className='text-3xl'>Today's Cryptocurrency Prices</h1>
+          <h1 className='text-3xl'>Today&apos;s Cryptocurrency Prices</h1>
           <CustomTable
             Items={currentItems}
             handleDragFunction={handleOnDrag}

@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import LineChart from '@/components/LineChart/LineChart'
-import { fetchCoinData } from '@/app/api/coinData/route'
-import { fetchHistoricalData } from '@/app/api/coinData/route'
+import { fetchCoinData } from '@/app/utils/coinData/UtilFunction'
+import { fetchHistoricalData } from '@/app/utils/coinData/UtilFunction'
 import CommonHeader from '@/components/global/CommonHeader'
 import { CoinContext } from '@/context/coinContext'
 import { useContext } from 'react'
@@ -124,7 +124,7 @@ const Coin = () => {
                     <div className='flex gap-5'>
 
                       <div className="flex flex-col gap-1 ">
-                        <p className='flex-nowrap flex' >Today's Low</p>
+                        <p className='flex-nowrap flex' >Today&apos;s Low</p>
                         {/* @ts-ignore */}
                         <p className='text-sm text-red-600'>{coinData?.market_data.low_24h["usd"]}</p>
 
@@ -142,7 +142,7 @@ const Coin = () => {
                       />
 
                       <div className="flex flex-col gap-1 ">
-                        <p>Today's High</p>
+                        <p>Today&apos;s High</p>
                       
                         <p className='text-sm text-green-600'>
                           {/* @ts-ignore */}

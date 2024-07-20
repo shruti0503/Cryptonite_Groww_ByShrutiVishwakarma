@@ -37,7 +37,7 @@
     return ans;
   };
 
-export const fetchAllCoin =async () => {
+export const fetchAllCoin =async() => {
     // console.log("api", process.env.API_KEY);
     let ans;
 

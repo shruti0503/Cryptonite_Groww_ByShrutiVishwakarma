@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useState, ReactNode, FC, useEffect } from "react";
-import { fetchAllCoin } from "@/app/api/coinData/route";
+import { fetchAllCoin } from "@/app/utils/coinData/UtilFunction";
 interface CoinContextProps {
   coins: any[];
   setCoins: React.Dispatch<React.SetStateAction<any[]>>;

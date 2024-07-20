@@ -16,11 +16,11 @@ const Footer = () => {
         {
             FooterLinks.map((MainLink, index)=>(
 
-                <div className='flex flex-col w-[300px]'>
+                <div className='flex flex-col w-[300px]' key={index}>
                      <h3 className='text-2xl font-bold'>{MainLink.mainLinkHead}</h3>
                      {
                         MainLink.subLinks.map((link, index)=>(
-                            <Link href="#" className='mt-10 flex flex-nowrap'>{link.text}</Link>
+                            <Link href="#" className='mt-10 flex flex-nowrap' key={index}>{link.text}</Link>
                         ))
                      }
                  </div>               
