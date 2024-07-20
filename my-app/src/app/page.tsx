@@ -55,7 +55,7 @@ export default function Main() {
           direction="right"
           speed="slow"
         />
-         <h1 className="text-white text-3xl font-bold">UseAge</h1>
+        
         <InfiniteMovingCards
           className="md:mt-[2rem] mt-[-100px] justify-center  w-full flex"
           items={About}
