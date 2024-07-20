@@ -36,6 +36,8 @@ const Coin = () => {
 
   useEffect(()=>{
 
+
+    
     setDisplayCoin(Coin)
 
   },[])
