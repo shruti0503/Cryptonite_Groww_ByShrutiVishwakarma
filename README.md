@@ -1,5 +1,5 @@
 # Cryptonite_Groww_ByShrutiVishwakarma
- 
+ DEPLOYED LINK: https://cryptonite-by-shruti-vishwakarma.vercel.app/
 Below is the Demo Video of the project:
 https://drive.google.com/file/d/1VN4mcY-D6GnBfgU4jErOasNqGcMF1Aw8/view?usp=sharing
 <img width="1425" alt="Screenshot 2024-07-20 at 6 57 09 PM" src="https://github.com/user-attachments/assets/6dce8f27-cabf-42f2-90ba-29da47b5ae2d">
